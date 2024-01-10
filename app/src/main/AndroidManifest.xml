@@ -10,7 +10,7 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Aula_frase_do_dia"
+        android:theme="@style/Theme.android_app_animalSoul"
         tools:targetApi="31">
         <activity
             android:name=".MainActivity"

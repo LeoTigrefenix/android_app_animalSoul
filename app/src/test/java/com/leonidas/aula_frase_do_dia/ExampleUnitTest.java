@@ -1,4 +1,4 @@
-package com.leonidas.aula_frase_do_dia;
+package com.leonidas.android_app_animalSoul;
 
 import org.junit.Test;
 

@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace = "com.leonidas.aula_frase_do_dia"
+    namespace = "com.leonidas.android_app_animalSoul"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.leonidas.aula_frase_do_dia"
+        applicationId = "com.leonidas.android_app_animalSoul"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

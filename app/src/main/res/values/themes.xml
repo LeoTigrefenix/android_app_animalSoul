@@ -1,9 +1,9 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Aula_frase_do_dia" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.android_app_animalSoul" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
-    <style name="Theme.Aula_frase_do_dia" parent="Base.Theme.Aula_frase_do_dia" />
+    <style name="Theme.android_app_animalSoul" parent="Base.Theme.android_app_animalSoul" />
 </resources>

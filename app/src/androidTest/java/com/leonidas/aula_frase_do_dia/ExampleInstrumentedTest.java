@@ -1,4 +1,4 @@
-package com.leonidas.aula_frase_do_dia;
+package com.leonidas.android_app_animalSoul;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.leonidas.aula_frase_do_dia", appContext.getPackageName());
+        assertEquals("com.leonidas.android_app_animalSoul", appContext.getPackageName());
     }
 }

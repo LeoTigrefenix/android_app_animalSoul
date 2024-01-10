@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Aula_frase_do_dia"
+rootProject.name = "android_app_animalSoul"
 include(":app")
  
