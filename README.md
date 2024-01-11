@@ -22,6 +22,18 @@ The message doesn't disappear
 ## V.0.2 trying to open this repository with Android Studio
 * About: 
 Replaced all "aula_frase_do_dia" terms to "android_app_animalSoul"
-
 * Bug:
 Trying to open this application in Android Studio
+
+## V.0.3 Test from Android Studio
+* About:
+  I'm learning how to commit in mey Github account 
+* Bug:
+  The software is not working. There a problem with the variables using `findViewById()`
+
+## V.0.4 finished initial app - four Jaguar ok 
+* About:
+  It's finished the initial app with the description of four jaguar. When click in one the page change to focus it and show the description.
+* Bug:
+  I'm using just MainActivity and there is no pages extras. 
+  I'm not using other layers yet.

@@ -23,24 +23,32 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    private TextView titulo;
+    private ImageView imgAlljaguars;
+    private ImageView img_jaguar_first;
+    private ImageView img_jaguar_second;
+    private ImageView img_jaguar_third;
+    private ImageView img_jaguar_fourth;
+    private ImageView img_arrowBack;
+    private TextView textoResposta;
     @Override
     protected void onCreate(Bundle savedInstanceState) { //Bumble é um tipo criado por meio da classe feita , como String
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main); //método da classe AppCompatActivity
-    }
 
         // Initialize views
         //   Button b_jaguar_first = findViewById(R.id.BJaguar1);
-        TextView titulo = findViewById(R.id.titulo);
-
-        ImageView imgAlljaguars = findViewById(R.id.ImgAllJaguar);
-        ImageView img_jaguar_first = findViewById(R.id.jaguar_first);
-        ImageView img_jaguar_second = findViewById(R.id.jaguar_second);
-        ImageView img_jaguar_third = findViewById(R.id.jaguar_third);
-        ImageView img_jaguar_fourth = findViewById(R.id.jaguar_fourth);
-        ImageView img_arrowBack = findViewById(R.id.arrowback);
+        titulo = findViewById(R.id.textoTopo);
+        imgAlljaguars = findViewById(R.id.ImgAllJaguar);
+        img_jaguar_first = findViewById(R.id.jaguar_first);
+        img_jaguar_second = findViewById(R.id.jaguar_second);
+        img_jaguar_third = findViewById(R.id.jaguar_third);
+        img_jaguar_fourth = findViewById(R.id.jaguar_fourth);
+        img_arrowBack = findViewById(R.id.arrowback);
+        textoResposta = findViewById(R.id.resultado);
         ///---------------------
+    }
+
 
         //Descrição de cada imagem ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         String descricaoJagua1 = "Você possui uma aura forte. Sua presença ilumina o lugar onde você chega e aquece o coração das pessoas com esperança e motivação. Jamais deixe que criticas negativas apaguem seu brilho.";
@@ -52,92 +60,76 @@ public class MainActivity extends AppCompatActivity {
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         //funções para mostrar na tela o texto ao toque do botão ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-        public void primeiroJaguar (View view){
+        public void primeiroJaguar (View view) {
 
-            if (imgAlljaguars.getVisibility() == View.VISIBLE) {
+            if (imgAlljaguars.getVisibility() == View.VISIBLE && img_jaguar_first.getVisibility() == View.INVISIBLE) {
                 imgAlljaguars.setVisibility(View.INVISIBLE);
                 img_jaguar_first.setVisibility(View.VISIBLE);
                 titulo.setVisibility(View.INVISIBLE);
                 img_arrowBack.setVisibility(View.VISIBLE);
-
-
+                textoResposta.setText(descricaoJagua1);
             }
 
-            TextView textoResposta = findViewById(R.id.resultado);
-            textoResposta.setText(descricaoJagua1);
+            
+
 
         }
 
         public void segundoJaguar (View view){
 
-            if (imgAlljaguars.getVisibility() == View.VISIBLE) {
+            if (imgAlljaguars.getVisibility() == View.VISIBLE && img_jaguar_second.getVisibility() == View.INVISIBLE) {
                 imgAlljaguars.setVisibility(View.INVISIBLE);
                 titulo.setVisibility(View.INVISIBLE);
                 img_jaguar_second.setVisibility(View.VISIBLE);
                 img_arrowBack.setVisibility(View.VISIBLE);
-
-
+                textoResposta.setText(descricaoJagua2);
             }
-
-            TextView textoResposta = findViewById(R.id.resultado);
-            textoResposta.setText(descricaoJagua2);
 
         }
         public void terceiroJaguar (View view){
 
-            if (imgAlljaguars.getVisibility() == View.VISIBLE) {
+            if (imgAlljaguars.getVisibility() == View.VISIBLE && img_jaguar_third.getVisibility() == View.INVISIBLE) {
                 imgAlljaguars.setVisibility(View.INVISIBLE);
                 titulo.setVisibility(View.INVISIBLE);
                 img_jaguar_third.setVisibility(View.VISIBLE);
                 img_arrowBack.setVisibility(View.VISIBLE);
-
-
+                textoResposta.setText(descricaoJagua3);
             }
-
-            TextView textoResposta = findViewById(R.id.resultado);
-            textoResposta.setText(descricaoJagua3);
 
         }
         public void quartoJaguar (View view){
 
-            if (imgAlljaguars.getVisibility() == View.VISIBLE) {
+            if (imgAlljaguars.getVisibility() == View.VISIBLE && img_jaguar_fourth.getVisibility() == View.INVISIBLE) {
                 imgAlljaguars.setVisibility(View.INVISIBLE);
                 titulo.setVisibility(View.INVISIBLE);
                 img_jaguar_fourth.setVisibility(View.VISIBLE);
                 img_arrowBack.setVisibility(View.VISIBLE);
-
-
+                textoResposta.setText(descricaoJagua4);
             }
-
-            TextView textoResposta = findViewById(R.id.resultado);
-            textoResposta.setText(descricaoJagua4);
 
         }
         //-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         //função para voltar a tela------------------------------------------------------------------------------------------
-//        public void voltarTela (View view){
-//
-//            if (img_arrowBack.getVisibility() == View.VISIBLE) {
-//
-//                imgAlljaguars.setVisibility(View.VISIBLE);
-//                titulo.setVisibility(View.VISIBLE);
-//
-//                img_jaguar_first.setVisibility(View.INVISIBLE);
-//                img_jaguar_second.setVisibility(View.INVISIBLE);
-//                img_jaguar_third.setVisibility(View.INVISIBLE);
-//                img_jaguar_fourth.setVisibility(View.INVISIBLE);
-//
-//                img_arrowBack.setVisibility(View.INVISIBLE);
-//
-//
-//                TextView textoResposta = findViewById(R.id.resultado);
-//
-//                textoResposta.setText("...");
-//            }
-//
-//
-//        }
+        public void voltarTela (View view){
+
+            if (img_arrowBack.getVisibility() == View.VISIBLE) {
+
+                imgAlljaguars.setVisibility(View.VISIBLE);
+                titulo.setVisibility(View.VISIBLE);
+
+                img_jaguar_first.setVisibility(View.INVISIBLE);
+                img_jaguar_second.setVisibility(View.INVISIBLE);
+                img_jaguar_third.setVisibility(View.INVISIBLE);
+                img_jaguar_fourth.setVisibility(View.INVISIBLE);
+
+                img_arrowBack.setVisibility(View.INVISIBLE);
+
+                textoResposta.setText("...");
+            }
+
+
+        }
 
         //-------------------------------------------------------------------------------------------------------------------
 
