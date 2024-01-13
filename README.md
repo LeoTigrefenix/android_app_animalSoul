@@ -37,3 +37,11 @@ Trying to open this application in Android Studio
 * Bug:
   I'm using just MainActivity and there is no pages extras. 
   I'm not using other layers yet.
+
+## V.0.5 finished initial app-learning overloading methods constructors 
+* About:
+  in MainActivity.java there is examples of how to use overloading methods and overloading constructors
+  I didn't change the app
+* Bug:
+  I'm using just MainActivity and there is no pages extras.
+  I'm not using other layers yet.

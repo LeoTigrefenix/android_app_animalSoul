@@ -17,10 +17,18 @@ package com.leonidas.android_app_animalSoul;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.util.Objects;
+
+/*
+The == operator tests whether two variables have the same references (aka pointer to a memory address).
+ Whereas the equals() method tests whether two variables refer to objects that have the same state (values).
+*/
 
 public class MainActivity extends AppCompatActivity {
     private TextView titulo;
@@ -47,6 +55,91 @@ public class MainActivity extends AppCompatActivity {
         img_arrowBack = findViewById(R.id.arrowback);
         textoResposta = findViewById(R.id.resultado);
         ///---------------------
+        //construtor nativo do Android
+        Intent meuConstrutor = new Intent() ;//open files of many types
+
+        //===================================================================================================
+        //===================================================================================================
+        //TESTING CONSTRUCTOR OPERATION. THERE IS NO CONNECTION WITH THE APP
+
+        class construtor {
+
+            //the variables of this class
+            String nome;
+            String email;
+            String senha;
+            int phoneNumber;
+
+            //construtor ; usa o mesmo nome da classe. É uma função específica da classe
+            //constructor ; uses the same class name. It is a class specific function
+            construtor(String inNome,String inEmail, String inSenha){
+
+                System.out.println(" ************************************* ");
+                System.out.println("barato é loko, to dendro do construtor");
+                System.out.println(" ************************************* ");
+
+                this.nome = inNome;
+                this.email = inEmail;
+                this.senha = inSenha;
+            };
+
+            //overload of the constructor . I can access this constructor using a different type of data input
+            construtor(int phoneNumber){
+
+                this.phoneNumber = phoneNumber;
+                System.out.println(" ************************************* ");
+                System.out.println("input of a number int");
+                System.out.println(phoneNumber);
+                System.out.println(" ************************************* ");
+
+            }
+
+            construtor(){
+                //empty
+            }
+
+            //função interna que monta o objeto dessa classe (MÉTODO)
+            //intern function, makes a class' object
+            Boolean verificarAlgo(String outName, String outEmail, String outSenha){
+
+                return (Objects.equals(outName, this.nome) && Objects.equals(outEmail, this.email) && Objects.equals(outSenha, this.senha));
+
+            }
+//posso usar a função (método) com entrada diferente
+            // I can use another method using the same name but different type input
+            Boolean verificarAlgo(String token){
+                String tokenFixoPorEnquanto = "09877";
+
+                System.out.println(" --tokentokentokentoken-- ");
+                System.out.println("auth (authentication by token");
+                System.out.println("--tokentokentokentoken-- ");
+
+                return (Objects.equals(token, tokenFixoPorEnquanto));
+            }
+
+        };
+
+
+        construtor testando = new construtor("nomezim", "email@gmail.com", "senhazinha");
+
+        System.out.println(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ");
+        System.out.println(testando.email);
+        System.out.println(" $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ ");
+
+
+        //chamar a função (método) interno da classe construida
+
+        Boolean resultadoDeVerificacao = testando.verificarAlgo("nomezim","email@gmail.com.br", "senhazinha");
+
+        System.out.println(" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ");
+        System.out.println(resultadoDeVerificacao);
+        System.out.println(" @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ ");
+
+
+        //===================================================================================================
+        //===================================================================================================
+
+
     }
 
 
@@ -132,5 +225,8 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //-------------------------------------------------------------------------------------------------------------------
+
+
+
 
 }
